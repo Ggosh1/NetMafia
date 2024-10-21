@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSocket Client</title>
+</head>
+<body>
+<script>
+    // Вставьте JavaScript-код, который я предоставил ранее, сюда
+    const socket = new WebSocket('ws://localhost:8080/ws');
+
+    socket.onopen = function(event) {
+        console.log('WebSocket connection opened');
+        socket.send('Hello from client!');
+    };
+
+    socket.onmessage = function(event) {
+        console.log('Message received:', event.data);
+    };
+
+    socket.onclose = function(event) {
+        console.log('WebSocket connection closed');
+    };
+</script>
+</body>
+</html>
