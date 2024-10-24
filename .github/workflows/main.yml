@@ -42,10 +42,10 @@ jobs:
           # gitlab-ci base url
           host: https://gitlab.com
           # gitlab-ci token
-          token: glptt-6d74a86fcbb1bb287c81aaea5527becc331b5b3d
+          token: glptt-cd8b01e65b9658faad29c7f9ee0a9761d8c58d51
           # gitlab-ci valid refs are only the branches and tags
           ref: main
           # gitlab project id
-          project_id: 62950312
+          project_id: 62918100
           # debug mode
           debug: true
