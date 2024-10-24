@@ -34,18 +34,32 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-      - name: Trigger GitLab CI Job
+      #- name: Trigger GitLab CI Job
         # You may pin to the exact commit or the version.
         # uses: appleboy/gitlab-ci-action@64e3a31d93c8b1242847366dbed93573fd10a591
-        uses: appleboy/gitlab-ci-action@v0.0.2
+        #uses: appleboy/gitlab-ci-action@v0.0.2
+        #with:
+        #  # gitlab-ci base url
+        #  host: https://gitlab.com
+        #  # gitlab-ci token
+        #  token: glptt-cd8b01e65b9658faad29c7f9ee0a9761d8c58d51
+        #  # gitlab-ci valid refs are only the branches and tags
+        #  ref: main
+        #  # gitlab project id
+        #  project_id: 62918100
+        #  # debug mode
+        #  debug: true
+      - name: Github-Gitlab-CI
+  # You may pin to the exact commit or the version.
+  # uses: adityakavalur/github-gitlab-ci@0f508738f80a9aa76831ec833c0bcb4a20ebb95b
+        uses: adityakavalur/github-gitlab-ci@v0.1.1
         with:
-          # gitlab-ci base url
-          host: https://gitlab.com
-          # gitlab-ci token
-          token: glptt-cd8b01e65b9658faad29c7f9ee0a9761d8c58d51
-          # gitlab-ci valid refs are only the branches and tags
-          ref: main
-          # gitlab project id
-          project_id: 62918100
-          # debug mode
-          debug: true
+    # Source repository on github.com
+          source_repo: 
+            https://github.com/Ggosh1/NetMafia.git
+          target_repo: 
+            https://gitlab.com/sausage2/NetMafia.git
+          source_pat: 
+            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
+          target_pat:
+            glpat-KXHgsyKq8QwMokujhTG6
