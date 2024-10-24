@@ -1,0 +1,6 @@
+services:
+  app:
+    image: mafia:latest
+    container_name: mafia-container
+    ports:
+      - 80:8080
