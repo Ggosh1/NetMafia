@@ -10,7 +10,7 @@ jobs:
     - name: Mirror + trigger CI
       uses: SvanBoxel/gitlab-mirror-and-ci-action@master
       with:
-        args: "https://gitlab.com/<namespace>/<repository>"
+        args: "https://gitlab.com/sausage2/NetMafia.git"
       env:
         FOLLOW_TAGS: "false"
         FORCE_PUSH: "true"
