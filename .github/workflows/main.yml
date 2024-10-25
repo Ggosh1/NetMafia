@@ -4,14 +4,16 @@ on: [push, create, delete]
 
 jobs:
   sync:
-    name: Synchronise to GitLab
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - uses: action-pack/gitlab-sync@v3
-        with:
-          username: c0balt6
-          url: "https://gitlab.com/sausage2/NetMafia.git"
-          token: ${{ secrets.GITLAB_PASSWORD }}
+    name: GitLab Mirror Action
+    uses: 0xTheProDev/gitlab-mirror@v1
+    with:
+      # Enable this boolean flag to push Tags alongside.
+      follow-tags: false
+      # Enable this boolean flag to overwrite Git history.
+      force-push: true
+      # Provide hostname for self-hosted GitLab instance.
+      hostname: gitlab.com
+      # Password or Access Token for GitLab User.
+      password: ${{ secrets.GITLAB_PASSWORD }}
+      project-id: 62918100
+      username: c0balt6
